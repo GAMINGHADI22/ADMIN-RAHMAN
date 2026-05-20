@@ -68,6 +68,7 @@
     }
 
     nav{
+      border-bottom:1px solid rgba(255,255,255,.08);
       width:100%;
       padding:20px 8%;
       display:flex;
@@ -131,6 +132,7 @@
     }
 
     .hero-text p{
+      font-size:18px;
       margin:20px 0;
       color:#d0d0d0;
       line-height:1.8;
@@ -155,6 +157,8 @@
     }
 
     .primary{
+      position:relative;
+      overflow:hidden;
       background:#00cfff;
       color:white;
       box-shadow:0 0 25px #9d4dff;
@@ -164,6 +168,21 @@
       background:transparent;
       border:2px solid #00cfff;
       color:white;
+    }
+
+    .btn::before{
+      content:'';
+      position:absolute;
+      width:0%;
+      height:100%;
+      left:0;
+      top:0;
+      background:rgba(255,255,255,.15);
+      transition:.4s;
+    }
+
+    .btn:hover::before{
+      width:100%;
     }
 
     .btn:hover{
@@ -194,22 +213,25 @@
     .about-box,
     .hero-text,
     .hero-img,
-
     .skill-box,
     .project-card,
     .contact-box{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
       padding:30px;
-      border-radius:20px;
-Atransitionsease      :.4.4translateY -8;
+      border-radius:24px;
+      backdrop-filter:blur(14px);
+      box-shadow:0 0 25px rgba(0,207,255,.08);
+      transition:.4s ease;
     }
 
     .about-box:hover,
     .skill-box:hover,
     .project-card:hover,
-    .contact-box:hover{
-      transform:(px);
+    .contact-box:hover,
+    .hero-text:hover,
+    .hero-img:hover{
+      transform:translateY(-8px);
       box-shadow:0 0 25px rgba(0,207,255,.5);
     }
 
@@ -285,6 +307,8 @@ Atransitionsease      :.4.4translateY -8;
 </head>
 <body>
 
+  <div style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(transparent,rgba(0,207,255,.03),transparent);animation:float 6s ease-in-out infinite;z-index:-3;"></div>
+
   <div style="position:fixed;width:100%;height:100%;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:40px 40px;z-index:-2;opacity:.3;"></div>
 
   <nav>
@@ -314,7 +338,8 @@ Atransitionsease      :.4.4translateY -8;
       </div>
     </div>
 
-    <div class="hero-img">
+    <div class="hero-img" style="position:relative;">
+      <div style="position:absolute;width:340px;height:340px;background:#00cfff;filter:blur(120px);opacity:.25;border-radius:50%;z-index:-1;"></div>
       <img src="https://i.ibb.co/7QpKsCX/profile.png" alt="profile">
     </div>
 
@@ -359,7 +384,7 @@ Atransitionsease      :.4.4translateY -8;
   </section>
 
   <section id="projects">
-    <h2 class="title">Projects</h2>
+    <h2 class="title">Featured Projects</h2>
 
     <div class="project-grid">
 
@@ -399,7 +424,7 @@ Atransitionsease      :.4.4translateY -8;
     </div>
   </section>
 
-  <footer style="background:rgba(255,255,255,.03);backdrop-filter:blur(10px);">
+  <footer style="background:rgba(255,255,255,.05);backdrop-filter:blur(16px);box-shadow:0 0 20px rgba(0,207,255,.08);">
     © 2026 ADMIN RAHMAN | All Rights Reserved
   </footer>
 
