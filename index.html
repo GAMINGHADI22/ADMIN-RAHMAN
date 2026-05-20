@@ -10,6 +10,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    @keyframes glow {
+      0%{text-shadow:0 0 10px #9d4dff;}
+      50%{text-shadow:0 0 30px #ff00c8,0 0 60px #9d4dff;}
+      100%{text-shadow:0 0 10px #9d4dff;}
+    }
+
+    @keyframes float {
+      0%{transform:translateY(0px);}
+      50%{transform:translateY(-15px);}
+      100%{transform:translateY(0px);}
+    }
+
+    @keyframes fadeUp {
+      from{opacity:0;transform:translateY(40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
     *{
       margin:0;
       padding:0;
@@ -19,7 +36,7 @@
     }
 
     body{
-      background:linear-gradient\(135deg,#050510,#0d0d24,#12002f\);
+      background:radial-gradient(circle at top left,#1b0036,#050510,#000000);
       color:white;
       overflow-x:hidden;
     }
@@ -78,7 +95,7 @@
     nav ul li a{
       text-decoration:none;
       color:white;
-      transition:.3s;
+      transition:.4s ease;
     }
 
     nav ul li a:hover{
@@ -109,6 +126,7 @@
 
     .hero-text h1 span{
       color:#9d4dff;
+      animation:glow 3s infinite;
       text-shadow:0 0 20px #c770ff;
     }
 
@@ -133,7 +151,7 @@
       cursor:pointer;
       text-decoration:none;
       font-weight:600;
-      transition:.3s;
+      transition:.4s ease;
     }
 
     .primary{
@@ -159,6 +177,7 @@
     }
 
     .hero-img img{
+      animation:float 4s ease-in-out infinite;
       width:320px;
       border-radius:30px;
       border:4px solid #c770ff;
@@ -173,6 +192,9 @@
     }
 
     .about-box,
+    .hero-text,
+    .hero-img,
+
     .skill-box,
     .project-card,
     .contact-box{
@@ -181,7 +203,7 @@
       padding:30px;
       border-radius:20px;
       backdrop-filter:blur(10px);
-      transition:.3s;
+      transition:.4s ease;
     }
 
     .about-box:hover,
@@ -230,7 +252,7 @@
       background:#111122;
       padding:14px 20px;
       border-radius:12px;
-      transition:.3s;
+      transition:.4s ease;
       border:1px solid #c770ff;
     }
 
@@ -264,8 +286,10 @@
 </head>
 <body>
 
+  <div style="position:fixed;width:100%;height:100%;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:40px 40px;z-index:-2;opacity:.3;"></div>
+
   <nav>
-    <div class="logo">ADMIN RAHMAN</div>
+    <div class="logo">⚡ ADMIN RAHMAN</div>
 
     <ul>
       <li><a href="#home">Home</a></li>
@@ -279,10 +303,10 @@
   <section class="hero" id="home">
 
     <div class="hero-text">
-      <h1>Hi, I'm <span>ADMIN RAHMAN</span></h1>
+      <h1 style="animation:fadeUp 1s ease;">Hi, I'm <span>ADMIN RAHMAN</span></h1>
 
       <p>
-        Creative Developer, Bot Creator & UI Designer. I build modern websites, Telegram bots, automation tools and premium neon interfaces with smooth animations.
+        Creative Developer, Bot Creator & UI Designer. I create futuristic websites, premium Telegram bots, automation systems and glowing neon interfaces with cinematic animations and smooth effects.
       </p>
 
       <div class="btns">
@@ -379,7 +403,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer style="background:rgba(255,255,255,.03);backdrop-filter:blur(10px);">
     © 2026 ADMIN RAHMAN | All Rights Reserved
   </footer>
 
