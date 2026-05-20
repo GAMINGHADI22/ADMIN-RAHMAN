@@ -366,16 +366,20 @@ window.onload = function(){
     </div>
 
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#home-bn">হোম</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#about-bn">সম্পর্কে</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#skills-bn">দক্ষতা</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#projects-bn">প্রজেক্ট</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#contact-bn">যোগাযোগ</a></li>
+      <li class="en-only"><a href="#home">Home</a></li>
+      <li class="bn-only"><a href="#home">হোম</a></li>
+
+      <li class="en-only"><a href="#about">About</a></li>
+      <li class="bn-only"><a href="#about">সম্পর্কে</a></li>
+
+      <li class="en-only"><a href="#skills">Skills</a></li>
+      <li class="bn-only"><a href="#skills">দক্ষতা</a></li>
+
+      <li class="en-only"><a href="#projects">Projects</a></li>
+      <li class="bn-only"><a href="#projects">প্রজেক্ট</a></li>
+
+      <li class="en-only"><a href="#contact">Contact</a></li>
+      <li class="bn-only"><a href="#contact">যোগাযোগ</a></li>
     </ul>
   </nav>
 
@@ -397,9 +401,14 @@ window.onload = function(){
         আমি futuristic animation এবং smooth interface দিয়ে modern digital experience তৈরি করতে পছন্দ করি।
       </p>
 
-      <div class="btns">
+      <div class="btns en-only">
         <a href="#contact" class="btn primary">Contact Me</a>
         <a href="#projects" class="btn secondary">My Projects</a>
+      </div>
+
+      <div class="btns bn-only">
+        <a href="#contact" class="btn primary">যোগাযোগ</a>
+        <a href="#projects" class="btn secondary">আমার প্রজেক্ট</a>
       </div>
     </div>
 
@@ -411,8 +420,8 @@ window.onload = function(){
   </section>
 
   <section id="about">
-    <h2 class="title">About Me</h2>
-    <h3 style="text-align:center;margin-top:-25px;margin-bottom:35px;color:#cfefff;">আমার সম্পর্কে</h3>
+    <h2 class="title en-only">About Me</h2>
+    <h2 class="title bn-only">আমার সম্পর্কে</h2>
 
     <div class="about-box">
       <h2 style="font-size:32px;margin-bottom:20px;color:#00cfff;">⚡ ADMIN RAHMAN</h2>
@@ -440,14 +449,17 @@ window.onload = function(){
   </section>
 
   <section id="skills">
-    <h2 class="title">Skills</h2>
-    <h3 style="text-align:center;margin-top:-25px;margin-bottom:35px;color:#cfefff;">দক্ষতা</h3>
+    <h2 class="title en-only">Skills</h2>
+    <h2 class="title bn-only">দক্ষতা</h2>
 
     <div class="skills-grid">
 
       <div class="skill-box">
-        <h3>Web Design</h3>
-        <p>Modern responsive website UI/UX design.</p>
+        <h3 class="en-only">Web Design</h3>
+        <h3 class="bn-only">ওয়েব ডিজাইন</h3>
+
+        <p class="en-only">Modern responsive website UI/UX design.</p>
+        <p class="bn-only">আধুনিক responsive website UI/UX design.</p>
       </div>
 
       <div class="skill-box">
@@ -469,8 +481,8 @@ window.onload = function(){
   </section>
 
   <section id="projects">
-    <h2 class="title">Featured Projects</h2>
-    <h3 style="text-align:center;margin-top:-25px;margin-bottom:35px;color:#cfefff;">প্রজেক্ট</h3>
+    <h2 class="title en-only">Featured Projects</h2>
+    <h2 class="title bn-only">প্রজেক্ট</h2>
 
     <div class="project-grid">
 
@@ -496,12 +508,15 @@ window.onload = function(){
   </section>
 
   <section id="contact">
-    <h2 class="title">Contact Me</h2>
-    <h3 style="text-align:center;margin-top:-25px;margin-bottom:35px;color:#cfefff;">যোগাযোগ</h3>
+    <h2 class="title en-only">Contact Me</h2>
+    <h2 class="title bn-only">যোগাযোগ</h2>
 
     <div class="contact-box">
-      <h3 style="margin-bottom:20px;font-size:28px;color:#00cfff;">Let's Connect</h3>
-      <p>You can contact me using these platforms.</p>
+      <h3 class="en-only" style="margin-bottom:20px;font-size:28px;color:#00cfff;">Let's Connect</h3>
+      <h3 class="bn-only" style="margin-bottom:20px;font-size:28px;color:#00cfff;">যোগাযোগ করুন</h3>
+
+      <p class="en-only">You can contact me using these platforms.</p>
+      <p class="bn-only">এই প্ল্যাটফর্মগুলো দিয়ে আমার সাথে যোগাযোগ করতে পারেন।</p>
 
       <div class="socials">
         <a href="https://www.youtube.com/@admindrahman">YouTube</a>
