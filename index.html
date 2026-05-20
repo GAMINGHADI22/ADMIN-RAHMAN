@@ -348,7 +348,9 @@ function setLanguage(lang){
   }
 }
 
-window.onload=()=>setLanguage('en');
+window.onload = function(){
+  setLanguage('en');
+};
 </script>
 
   <div style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:linear-gradient(transparent,rgba(0,207,255,.03),transparent);animation:float 6s ease-in-out infinite;z-index:-3;"></div>
@@ -359,8 +361,8 @@ window.onload=()=>setLanguage('en');
     <div class="logo">⚡ ADMIN RAHMAN</div>
 
     <div class="lang-toggle">
-      <button class="lang-btn" onclick="setLanguage\('en'\)">English</button>
-      <button class="lang-btn" onclick="setLanguage\('bn'\)">বাংলা</button>
+      <button class="lang-btn" onclick="setLanguage('en')">English</button>
+      <button class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
     </div>
 
     <ul>
