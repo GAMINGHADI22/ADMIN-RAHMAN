@@ -68,11 +68,4 @@ window.addEventListener("mousemove", (e)=>{
     glow.style.top = e.clientY + "px";
 });
 
-// Loading Screen
-window.addEventListener("load",()=>{
-    document.querySelector(".loader").style.opacity = "0";
-
-    setTimeout(()=>{
-        document.querySelector(".loader").style.display = "none";
-    },1000);
 });
