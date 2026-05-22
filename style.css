@@ -34,29 +34,4 @@ body::before{
 }
 
 @keyframes bgMove{
-    from{
-        transform:translateY(0);
-    }
-    to{
-        transform:translateY(-200px);
-    }
-}
-
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    backdrop-filter:blur(20px);
-    background:#0b081499;
-    border-bottom:1px solid #ffffff11;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:700;
 }
